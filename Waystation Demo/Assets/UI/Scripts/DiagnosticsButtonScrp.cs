@@ -9,13 +9,7 @@ public class DiagnosticsButtonScrp : MonoBehaviour
     private shipInBayManager Bay;
     private StatManager statManager;
     public float[] ShipValuesFlt;
-    public float dockedHullinteg;
-    public float dockedHullCorsn;
-    public float dockedIntrnCirct;
     public bool[] ShipValuesBl;
-    public bool dockedBallastTnk;
-    public bool dockedCommsTuned;
-    public bool dockedShipDisnfct;
 
     //Text about repair
     private string RepairLevel;
@@ -78,14 +72,7 @@ public class DiagnosticsButtonScrp : MonoBehaviour
     {
         DiagnosticsInterface.SetActive(true);
         RepairButtonUI.SetActive(true);
-
         statManager = Bay.shipInBay.GetComponentInChildren<StatManager>();
-        dockedHullinteg = statManager.HullInteg;
-        dockedHullCorsn = statManager.HullCorosn;
-        dockedIntrnCirct = statManager.IntrnCirct;
-        dockedBallastTnk = statManager.BallastTnk;
-        dockedCommsTuned = statManager.CommsTuned;
-        dockedShipDisnfct = statManager.ShipDisinfect;
 
         //arrays holding the stats from the ship
         ShipValuesFlt = new float[] 

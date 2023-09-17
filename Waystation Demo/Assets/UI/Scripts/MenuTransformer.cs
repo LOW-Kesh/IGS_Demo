@@ -29,4 +29,8 @@ public class MenuTransformer : MonoBehaviour
     {
         SceneManager.LoadScene("HomeScreen");
     }
+    public void CounterOpen()
+    {
+        SceneManager.LoadScene(DialogueManager);
+    }
 }

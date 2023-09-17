@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShipScript : MonoBehaviour
 {
+    public string ShipType;
     public float Sspeed;
     public Vector3 destination;
     public Vector3 entrance;

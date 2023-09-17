@@ -16,6 +16,8 @@ public class shipspawner : MonoBehaviour
     public Sprite ShipBody2;
     public Sprite ShipBody3;
 
+    private string[] ShipType;
+
     //ship release
     public bool leave;
     public bool ready;
@@ -23,7 +25,6 @@ public class shipspawner : MonoBehaviour
     void Awake()
     {
         //anchoring ship to dock on load
-
         Ships = GameObject.FindGameObjectsWithTag("Ships");
         foreach (GameObject ship in Ships)
         {
@@ -74,6 +75,12 @@ public class shipspawner : MonoBehaviour
 
     public void SpawnShip()
     {
+        //ship type generator
+        ShipType = new string[5]
+            {"Hauler","Civillian","Scientific","Mining","Military"};
+        int typeNum = Random.Range(0, ShipType.Length);
+        ShipPreFab.GetComponent<ShipScript>().ShipType = ShipType[typeNum];
+
         //list of skins for body
         Sprite[] ShipBodySkins = new Sprite[3]
         {

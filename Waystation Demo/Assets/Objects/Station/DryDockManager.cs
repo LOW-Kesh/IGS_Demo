@@ -17,6 +17,10 @@ public class DryDockManager : MonoBehaviour
     public bool dockedCommsTuned;
     public bool dockedShipDisnfct;
 
+    //cargo
+    private CargoManager CargoManager;
+
+
     //sprite of docked ship
     public Sprite shipSprite;
 
@@ -44,18 +48,23 @@ public class DryDockManager : MonoBehaviour
 
         //retrieving ship sprite to be rendered in drydock
         shipSprite = dockedShip.GetComponent<SpriteRenderer>().sprite;
-        //DontDestroyOnLoad(this);
 
+        int iter = 0;
+        CargoManager = collision.GetComponentInChildren<CargoManager>();
+        foreach (string cargo in CargoManager.Cargo)
+        {
+            Debug.Log(CargoManager.CargoQuant[iter] + " of " + cargo);
+                iter++;
+        }
     }
 
    /* private void OnTriggerStay2D(Collider2D collision)
     {
         Debug.Log("Ship in dock");
-    }
+    }*/
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log("Ship departing dock...");
     }
-   */
 }
