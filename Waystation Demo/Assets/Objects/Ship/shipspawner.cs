@@ -32,8 +32,6 @@ public class shipspawner : MonoBehaviour
                 ship.BroadcastMessage("AnchorShip");
             }
         }
-
-        ready = false;
     }
 
     void Update()
@@ -44,13 +42,14 @@ public class shipspawner : MonoBehaviour
             Vector3 entrance = GameObject.Find("DockEntr").transform.position;
             Vector3 Exit = new Vector3(-15, 0.7f, 0);
 
-            Ships = GameObject.FindGameObjectsWithTag("Ships");
+            
             foreach (GameObject ship in Ships)
             {
                 if (!ready)
                 {
                     Debug.Log("stage 1 release");
                     ship.GetComponent<SpriteRenderer>().flipX = true;
+                    ship.GetComponent<ShipScript>().release = true;
                     ship.transform.position = Vector2.MoveTowards(ship.transform.position, entrance, Sspeed * Time.deltaTime);
                     if (ship.transform.position == entrance)
                     {
@@ -67,6 +66,7 @@ public class shipspawner : MonoBehaviour
                 {
                     Debug.Log("stage 3 release");
                     Destroy(ship.gameObject);
+                    leave = false;
                 }
             }
         }
@@ -94,5 +94,7 @@ public class shipspawner : MonoBehaviour
     public void ReleaseShip()
     {
         leave = true;
+        ready = false;
+        Ships = GameObject.FindGameObjectsWithTag("Ships");
     }
 }

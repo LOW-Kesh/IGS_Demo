@@ -245,6 +245,7 @@ MonoBehaviour:
   destination: {x: 0, y: 0, z: 0}
   entrance: {x: 0, y: 0, z: 0}
   docked: 0
+  release: 0
 --- !u!212 &3029932442730893107
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -286,7 +287,7 @@ SpriteRenderer:
   m_SortingLayerID: -1908028653
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f53bf4f61f469eb4994c2ad955ee85d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ecd71262167c70f4480c041ab64a3123, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
