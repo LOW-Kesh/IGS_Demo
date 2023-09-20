@@ -11,6 +11,7 @@ public class ShipScript : MonoBehaviour
     private bool ready;
     public bool docked;
     public bool release;
+    private bool anchor;
 
     void Start()
     {
@@ -47,20 +48,12 @@ public class ShipScript : MonoBehaviour
             }
         }
 
-        if (docked & !release)
+        if (docked && !release)
         {
-            destination = GameObject.Find("shipDest").transform.position;
-            transform.position = destination;
+            Transform Anchor;
+            Anchor = GameObject.FindGameObjectWithTag("Anchor").transform;
+            gameObject.transform.position = Anchor.position;
+            gameObject.transform.localScale = Anchor.localScale;
         }
-    }
-
-    private void AnchorShip()
-    {
-        Debug.Log("Anchor activated");
-        Transform Anchor;
-        Anchor = GameObject.FindGameObjectWithTag("Anchor").transform;
-        gameObject.transform.position = Anchor.position;
-        gameObject.transform.localScale = Anchor.localScale;
-        Debug.Log("Anchor is " + Anchor.name + ". Scale = " + Anchor.localScale);
     }
 }

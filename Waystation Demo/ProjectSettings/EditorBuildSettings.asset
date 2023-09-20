@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DryDockScene.unity
     guid: df2548ffb71a0d243a04bfb80d8eb3c2
+  - enabled: 1
+    path: Assets/Scenes/CounterScreen.unity
+    guid: cddbb17b263e2d248869b114393a5ac0
   m_configObjects: {}

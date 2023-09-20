@@ -26,13 +26,6 @@ public class shipspawner : MonoBehaviour
     {
         //anchoring ship to dock on load
         Ships = GameObject.FindGameObjectsWithTag("Ships");
-        foreach (GameObject ship in Ships)
-        {
-            if (ship.GetComponent<ShipScript>().docked)
-            {
-                ship.BroadcastMessage("AnchorShip");
-            }
-        }
     }
 
     void Update()

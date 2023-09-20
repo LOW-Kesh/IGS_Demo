@@ -6,7 +6,7 @@ public class CargoManager : MonoBehaviour
 {
     private ShipScript shipCore;
     private string shipType;
-    public float CargoTypes;
+    public int CargoTypes;
     public string[] Cargo;
     public float[] CargoQuant;
     private string[] CargoList;
@@ -90,7 +90,7 @@ public class CargoManager : MonoBehaviour
     {
         //determines how many differnt types of cargo and sets that as the size of the arrays
         CargoTypes = Random.Range(1, maxtype);
-        Cargo = new string[maxtype -1];
+        Cargo = new string[CargoTypes];
         CargoQuant = new float [Cargo.Length];
 
         //generates a quantity for each cargo

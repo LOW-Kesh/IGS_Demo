@@ -191,6 +191,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9eeb032bf893dd4083ee84de4d04932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CargoTypes: 0
+  Cargo: []
+  CargoQuant: []
 --- !u!1 &8884899282715283871
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50a8deca3ff18684c9a542869a0d5816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShipType: Military
   Sspeed: 2
   destination: {x: 0, y: 0, z: 0}
   entrance: {x: 0, y: 0, z: 0}
@@ -287,7 +291,7 @@ SpriteRenderer:
   m_SortingLayerID: -1908028653
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ecd71262167c70f4480c041ab64a3123, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f53bf4f61f469eb4994c2ad955ee85d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
